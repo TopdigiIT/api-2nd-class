@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./country.css">
+    <title>Country Search-API</title>
+</head>
+<body>
+    <!-------------------------------- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            API (Country)
+        </div>
+        <ul class="nav-links">
+            <li><a href="./index.html">Country</a></li>
+            <li><a href="./food.html">Food</a></li>
+        </ul>
+    </nav>
+
+    <!------------------------------------ Page Content -->
+    <h1 style="text-align: center;">Country Information</h1>
+    
+    <!------------------------------- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a country..." oninput="filterCountries()">
+    </div>
+
+    <div id="countries"></div>
+
+    <!---------------------- Modal for Full-Screen Information -->
+    <div id="countryModal" class="modal">
+        <div class="modal-content">
+            <div id="modalInfo"></div>
+        </div>
+    </div>
+
+    <!------------------------------------ Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+    <script src="./country.js"></script>
+</body>
+</html>

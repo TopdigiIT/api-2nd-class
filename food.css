@@ -1,0 +1,151 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 15px;
+    /* Narrowed padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    /* Reduced gap */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    /* Rounded corners for links */
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Light hover effect */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    margin-top: 10px;
+    /* Space between nav and search */
+}
+
+.search-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    transition: box-shadow 0.3s;
+}
+
+.search-container input:focus {
+    box-shadow: 0 0 5px rgba(0, 120, 255, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+#meals {
+    display: grid;
+    /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr);
+    /* Four columns */
+    gap: 20px;
+    /* Space between items */
+    padding: 20px;
+}
+
+.meal {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.meal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.meal img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    /* Add pointer cursor */
+}
+
+.meal p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.meal p strong {
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    /* Add pointer cursor */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 750px;
+    /* Increased width by 25% */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+    font-size: 12px;
+    /* Decrease the font size for the description */
+    color: #333;
+    /* Optional: Change color to match the theme */
+}
+
+.modal-content img {
+    max-width: 30%;
+    /* Decrease image size */
+    height: auto;
+}
